@@ -11,7 +11,18 @@ export default defineConfig({
                 charactersRick: "http://localhost:3001/assets/remoteEntry.js",
                 charactersHarry: "http://localhost:3002/assets/remoteEntry.js"
             },
-            shared: ["react", "react-dom"]
+            shared: {
+                react: {
+                    import: true,
+                    version: "^18.2.0",
+                    shareScope: "default"
+                },
+                "react-dom": {
+                    import: true,
+                    version: "^18.2.0",
+                    shareScope: "default"
+                }
+            }
         })
     ],
     build: {
