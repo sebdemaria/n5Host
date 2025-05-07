@@ -33,7 +33,9 @@ describe("Select component", () => {
         render(<Select options={options} value='en' onChange={handleChange} />);
 
         const select = screen.getByRole("combobox", { name: "select" });
+
         fireEvent.change(select, { target: { value: "es" } });
+
         expect(handleChange).toHaveBeenCalledWith("es");
     });
 });
