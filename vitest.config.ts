@@ -9,7 +9,26 @@ export default defineConfig({
         globals: true,
         include: ["src/tests/**/*.{test,spec}.{ts,tsx}"],
         setupFiles: "./vitest.setup.ts",
-        css: true
+        css: true,
+        coverage: {
+            provider: "v8",
+            exclude: [
+                "src/App.tsx",
+                "src/GlobalStyles.ts",
+                "src/main.tsx",
+                "src/theme.ts",
+                "src/consts/**",
+                "vitest.config.*",
+                "vite.config.*",
+                "jest.config.*",
+                "tailwind.config.*",
+                "postcss.config.*",
+                "tsconfig.*",
+                "*.config.*",
+                "**/config/**",
+                "**/*.d.ts"
+            ]
+        }
     },
     resolve: {
         alias: {

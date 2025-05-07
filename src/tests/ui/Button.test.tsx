@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
 describe("Button component", () => {
-    it("renders with text", () => {
+    it("should render with text", () => {
         render(<Button>Click Me</Button>);
 
         expect(screen.getByText("Click Me")).toBeInTheDocument();

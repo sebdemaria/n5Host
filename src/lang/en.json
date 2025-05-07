@@ -1,8 +1,4 @@
 {
-    "title": "Character List rick",
-    "characterList": {
-        "error": "There was an error while fetching the characters."
-    },
     "common": {
         "loading": "Loading..."
     }
